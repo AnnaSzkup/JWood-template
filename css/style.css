@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fff;
+  font-size: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; }
+
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff; }
+
+li {
+  list-style-type: none; }
+
+h2 {
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 44px; }
+
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 0 0.5rem;
+  border-bottom: 1px solid #fff;
+  opacity: 0.8;
+  z-index: 99;
+  transition: 0.5s; }
+  .nav__list {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%; }
+  .nav__item {
+    display: inline-block;
+    padding: 0 1rem; }
+  .nav__link:hover {
+    color: #455f50; }
+  .nav__reverse {
+    background-color: rgba(0, 0, 0, 0.7); }
+
+.hamburger {
+  display: none;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-top: 5px solid #ffffff;
+  background: transparent;
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  right: 20px;
+  transition: 0.3s transform linear;
+  cursor: pointer; }
+
+.hamburger::after,
+.hamburger::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  border-top: 5px solid #ffffff;
+  transform: translateY(5px); }
+
+.hamburger::after {
+  transform: translateY(15px);
+  transition: 0.3s transform linear; }
+
+.header {
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: #fff;
+  text-transform: uppercase; }
+  .header__content {
+    position: relative;
+    transform: translateX(-50%);
+    top: 50%;
+    left: 50%;
+    margin: 6rem 0 3rem;
+    text-align: center; }
+    .header__content h1 {
+      font-size: 40px;
+      font-weight: 400; }
+      .header__content h1 span {
+        font-weight: 700; }
+    .header__content img {
+      max-width: 100%;
+      height: auto;
+      padding: 2rem; }
+
+.scroll {
+  position: relative;
+  bottom: 0;
+  margin: 3rem auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px; }
+  .scroll::after {
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 20px;
+    content: ">>";
+    transform: rotate(90deg) scaleY(2.5);
+    margin-top: 1rem; }
+
+.about-me {
+  color: #000;
+  padding: 8% 8% 0; }
+  .about-me h2 {
+    text-transform: uppercase;
+    padding-bottom: 2rem; }
+  .about-me p {
+    padding-bottom: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px; }
+  .about-me img {
+    max-width: 100%;
+    height: auto; }
+  .about-me__content {
+    padding: 2rem 3rem 4rem 1rem; }
+  .about-me__signature {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px; }
+
+.portfolio {
+  background-image: url("../img/portfolio-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: #fff; }
+  .portfolio h2 {
+    text-transform: uppercase;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 6rem 0 3rem; }
+  .portfolio__pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 3rem; }
+    .portfolio__pictures img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem;
+      box-shadow: 0 0 20px black;
+      transition: 0.3s; }
+      .portfolio__pictures img:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+
+.contact {
+  text-align: center;
+  padding: 10rem 0;
+  text-transform: uppercase; }
+  .contact h3 {
+    width: 100%;
+    padding-bottom: 1rem;
+    font-size: 22px;
+    font-weight: 700; }
+  .contact p {
+    width: 100%;
+    padding-bottom: 1rem;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 4px; }
+  .contact a {
+    color: #000; }
+    .contact a:hover {
+      color: #455f50; }
+  .contact__icons {
+    width: 100%; }
+    .contact__icons img {
+      margin: 0 0.5rem; }
+
+@media (max-width: 575px) {
+  .header h1 {
+    font-size: 30px; }
+
+  h2 {
+    font-size: 36px; }
+
+  .about-me__content {
+    padding: 2rem 1rem 4rem; }
+
+  .contact h3 {
+    font-size: 16px; }
+  .contact p {
+    font-size: 20px; }
+
+  .hamburger {
+    display: inline-block; }
+    .hamburger__open {
+      transform: rotate(45deg) translateY(5px);
+      border: none; }
+      .hamburger__open::after {
+        transform: rotate(-90deg) translateX(-6px); }
+
+  .nav {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.7); }
+    .nav__item {
+      display: none;
+      padding: 1rem; }
+    .nav__list {
+      width: 100%; }
+    .nav__list--open {
+      display: block; } }
+
+/*# sourceMappingURL=style.css.map */
